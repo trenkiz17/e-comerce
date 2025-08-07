@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-comerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="pg1">
+        <header>
+            <p id="estilo1">Estilo que entra em campo</p>
+        </header>
+        <div id="f1">
+            <img id="imglogo" src="imgi/Logo Minimalista para Escola de Futebol Branco e Laranja Logo.png" alt="">
+             <div id="f2">
+                <a class="ig1" href="index.html">inicio</a>
+                <a class="ig1" href="produtosteste.html">produtos</a>
+                <a class="ig1" href="pedidos.html">Pedidos</a>
+                <a class="ig1" href="quemsomos.html">quem somos</a>
+                <a class="ig1" href="contato.html">Contato</a>
+                <a class="ig1" href="cadrasto.html">cadrasto</a>
+                <a href="busca.html"> <img src="mdi-light_magnify.png" alt=""> </a>
+                <img src="Vector.png" alt="">
+            </div>
+
+            <!DOCTYPE html>
+
+    <section class="busca-section">
+        <h2>Buscar Produtos</h2>
+        <div class="busca-container">
+            <input type="text" id="campo-busca" placeholder="Digite o nome do produto...">
+            <button onclick="buscar()">Buscar</button>
+        </div>
+        <div id="resultados" class="resultados-container">
+            <!-- Resultados aparecem aqui -->
+        </div>
+    </section>
+
+    <script>
+        function buscar() {
+            const termo = document.getElementById("campo-busca").value.toLowerCase();
+            const resultados = document.getElementById("resultados");
+
+            // Dados simulados (pode ser substituído por uma lista real ou banco)
+            const produtos = [
+                "Camisa Oficial",
+                "Bermuda Esportiva",
+                "Meião",
+                "Chuteira Nike",
+                "Bola de Futebol"
+            ];
+
+            const encontrados = produtos.filter(produto => produto.toLowerCase().includes(termo));
+
+            resultados.innerHTML = encontrados.length
+                ? encontrados.map(item => `<p>${item}</p>`).join("")
+                : "<p>Nenhum produto encontrado.</p>";
+        }
+    </script>
+</body>
+</html>
