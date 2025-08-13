@@ -198,6 +198,7 @@ header {
 }
 
 .imagem-marca img {
+    border-radius: 90px ;
     margin-top: 40px;
     width: 150px;
     opacity: 0.9;
@@ -298,10 +299,11 @@ header {
 }
 
 .busca-section {
+    margin-left: 10%;
     text-align: center;
-    padding: 40px;
+    padding: 60px;
     background-color: #0d1a2b;
-    min-height: 100vh;
+    min-height: 110vh;
 }
 
 .busca-section h2 {
